@@ -12,19 +12,31 @@
         <h1>Le Shifumi</h1>
 
         <div id="jeu">
-            <button id="pierre">pierre</button>
-            <button id="feuille">feuille</button>
-            <button id="ciseaux">ciseaux</button>
+            <button id="btn0">pierre</button>
+            <button id="btn1">feuille</button>
+            <button id="btn2">ciseaux</button>
         </div>
 
         <div id="score">
             <h2>Statistique</h2>
-            <div id="choix_j"></div>
-            <div id="choix_b"></div>
-            <div id="resultat"></div>
-            <div id="victorie"></div>
-            <div id="egalite"></div>
-            <div id="defaite"></div>
+            <div>
+                <p>Le joueur à choisi : <span id="choix_j"></span></p>
+            </div>
+            <div>
+                <p>Le bot à choisi : <span id="choix_b"></span></p>
+            </div>
+            <div>
+                <p>Le joueur à <span id="resultat"></span></p>
+            </div>
+            <div>
+                <p>Le joueur à gagner <span id="victoire"></span> fois</p>
+            </div>
+            <div>
+                <p>Le joueur à fait égalité <span id="egalite"></span> fois</p>
+            </div>
+            <div>
+                <p>Le joueur à perdu <span id="defaite"></span> fois</p>
+            </div>
             <button id="reset">réinitialiser la partie</button>
         </div>
 
