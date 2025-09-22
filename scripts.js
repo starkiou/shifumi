@@ -7,6 +7,11 @@ let egalite = 0;
 let defaite = 0;
 let possibilite = ['pierre','feuille','ciseaux']
 
+
+document.getElementById("victoire").textContent = 0;
+document.getElementById("egalite").textContent = 0;
+document.getElementById("defaite").textContent = 0;
+
 reset.addEventListener("click", restart);
 
 function restart(){
@@ -16,14 +21,17 @@ function restart(){
 function comparer(jouer_j, jouer_b){
     if(jouer_j == jouer_b){
         resultat = 'équalité';
+        egalite++;
     }
     else if((jouer_j === 'pierre' && jouer_b === 'ciseaux') ||
             (jouer_j === 'ciseaux' && jouer_b === 'feuille') ||
             (jouer_j === 'feuille' && jouer_b === 'pierre')
     ){
         resultat = 'gagné';
+        victoire++;
     }else{
         resultat = 'perdu';
+        defaite++;
     }
 
     document.getElementById("choix_j").textContent = jouer_j;
@@ -34,12 +42,11 @@ function comparer(jouer_j, jouer_b){
     document.getElementById("defaite").textContent = defaite;
 }
 
-for(i = 0; i<3; i++){
-    let bouton =document.getElementById("btn"+i)
+for(let i = 0; i < 3; i++){
+    let bouton = document.getElementById("btn"+i);
     bouton.addEventListener("click", function(){
-        jouer_j = bouton.textContent;
+        jouer_j = bouton.querySelector('.btn-label').textContent.trim();
         jouer_b = possibilite[Math.floor(Math.random() * 3)];
-        alert('robot' + jouer_b);
         comparer(jouer_j, jouer_b);
     });
 }
