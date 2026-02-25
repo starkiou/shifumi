@@ -1,4 +1,3 @@
-
 let jouer_j;
 let jouer_b;
 let resultat;
