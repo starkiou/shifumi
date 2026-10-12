@@ -7,19 +7,29 @@ let defaite = 0;
 let possibilite = ['pierre','feuille','ciseaux']
 
 
-document.getElementById("victoire").textContent = 0;
-document.getElementById("egalite").textContent = 0;
-document.getElementById("defaite").textContent = 0;
+afficherScores();
 
-reset.addEventListener("click", restart);
+document.getElementById("reset").addEventListener("click", restart);
+
+function afficherScores(){
+    document.getElementById("victoire").textContent = victoire;
+    document.getElementById("egalite").textContent = egalite;
+    document.getElementById("defaite").textContent = defaite;
+}
 
 function restart(){
-    document.location.reload();
+    victoire = 0;
+    egalite = 0;
+    defaite = 0;
+    document.getElementById("choix_j").textContent = '';
+    document.getElementById("choix_b").textContent = '';
+    document.getElementById("resultat").textContent = '';
+    afficherScores();
 }
 
 function comparer(jouer_j, jouer_b){
-    if(jouer_j == jouer_b){
-        resultat = 'équalité';
+    if(jouer_j === jouer_b){
+        resultat = 'égalité';
         egalite++;
     }
     else if((jouer_j === 'pierre' && jouer_b === 'ciseaux') ||
@@ -36,15 +46,13 @@ function comparer(jouer_j, jouer_b){
     document.getElementById("choix_j").textContent = jouer_j;
     document.getElementById("choix_b").textContent = jouer_b;
     document.getElementById("resultat").textContent = resultat;
-    document.getElementById("victoire").textContent = victoire;
-    document.getElementById("egalite").textContent = egalite;
-    document.getElementById("defaite").textContent = defaite;
+    afficherScores();
 }
 
 for(let i = 0; i < 3; i++){
     let bouton = document.getElementById("btn"+i);
     bouton.addEventListener("click", function(){
-        jouer_j = bouton.querySelector('.btn-label').textContent.trim();
+        jouer_j = bouton.dataset.choix;
         jouer_b = possibilite[Math.floor(Math.random() * 3)];
         comparer(jouer_j, jouer_b);
     });

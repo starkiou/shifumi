@@ -3,6 +3,8 @@
 
     <head>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shifumi</title>
         <link rel="stylesheet" href="css/style.css" />
 
@@ -12,30 +14,30 @@
         <h1>Le Shifumi</h1>
 
         <div id="jeu">
-            <button id="btn0"><span class="emoji">✊</span><span class="btn-label">pierre</span></button>
-            <button id="btn1"><span class="emoji">✋</span><span class="btn-label">feuille</span></button>
-            <button id="btn2"><span class="emoji">✌️</span><span class="btn-label">ciseaux</span></button>
+            <button id="btn0" data-choix="pierre"><span class="emoji">✊</span><span class="btn-label">pierre</span></button>
+            <button id="btn1" data-choix="feuille"><span class="emoji">✋</span><span class="btn-label">feuille</span></button>
+            <button id="btn2" data-choix="ciseaux"><span class="emoji">✌️</span><span class="btn-label">ciseaux</span></button>
         </div>
 
         <div id="score">
-            <h2>Statistique</h2>
+            <h2>Statistiques</h2>
             <div>
-                <p>Le joueur à choisi : <span id="choix_j"></span></p>
+                <p>Le joueur a choisi : <span id="choix_j"></span></p>
             </div>
             <div>
-                <p>Le bot à choisi : <span id="choix_b"></span></p>
+                <p>Le bot a choisi : <span id="choix_b"></span></p>
             </div>
             <div>
-                <p>Le joueur à <span id="resultat"></span></p>
+                <p>Résultat : <span id="resultat"></span></p>
             </div>
             <div>
-                <p>Le joueur à gagner <span id="victoire"></span> fois</p>
+                <p>Le joueur a gagné <span id="victoire"></span> fois</p>
             </div>
             <div>
-                <p>Le joueur à fait égalité <span id="egalite"></span> fois</p>
+                <p>Le joueur a fait égalité <span id="egalite"></span> fois</p>
             </div>
             <div>
-                <p>Le joueur à perdu <span id="defaite"></span> fois</p>
+                <p>Le joueur a perdu <span id="defaite"></span> fois</p>
             </div>
             <button id="reset">réinitialiser la partie</button>
         </div>
