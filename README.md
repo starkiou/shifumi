@@ -1,55 +1,21 @@
+# Shifumi
 
-# 🎮 Shifumi (Pierre - Feuille - Ciseaux)
+Un pierre-feuille-ciseaux contre l'ordinateur, en HTML, CSS et JavaScript sans framework. C'est mon premier petit jeu web.
 
-Un petit jeu Shifumi développé en HTML5, CSS et JavaScript vanilla. Choisissez Pierre, Feuille ou Ciseaux, jouez contre l'ordinateur et suivez vos scores.
+**[▶️ Jouer en ligne](https://starkiou.github.io/shifumi/)**
 
-## ✨ Fonctionnalités
+![Une partie de Shifumi](docs/partie.png)
 
-- 🎯 Gameplay simple et réactif
-- 📊 Affichage des scores (victoire / égalité / défaite)
-- 🔁 Bouton de réinitialisation
+## Fonctionnalités
 
-## 🎮 Comment Jouer
+- Un clic sur pierre, feuille ou ciseaux joue une manche contre un choix aléatoire de l'ordinateur.
+- Les deux choix et le résultat de la manche s'affichent, avec le total des victoires, égalités et défaites.
+- Un bouton remet les compteurs à zéro sans recharger la page.
 
-1. Ouvrez `index.html` dans votre navigateur
-2. Cliquez sur un des boutons (pierre / feuille / ciseaux)
-3. L'ordinateur joue, le résultat s'affiche et les scores sont mis à jour
-4. Cliquez sur **réinitialiser la partie** pour recommencer
+## Lancer en local
 
-## 🕹️ Contrôles
+Aucune installation : cloner le dépôt et ouvrir `index.html` dans un navigateur.
 
-- **Cliquez** sur l'un des boutons pour jouer
+## Licence
 
-## 📂 Structure du Projet
-
-```
-shifumi/
-├── index.html          # Page HTML principale
-├── css/
-│   └── style.css      # Styles CSS
-├── js/
-│   └── scripts.js     # Logique du jeu
-└── README.md           # Ce fichier
-```
-
-## 🚀 Installation
-
-Aucune installation requise ! Il suffit de :
-
-1. Cloner le repository ou télécharger les fichiers
-2. Ouvrir `index.html` dans un navigateur web
-3. C'est prêt à jouer ! 🎉
-
-## 🛠️ Technologie
-
-- **HTML5** : Structure et rendu
-- **CSS3** : Styles et mise en page
-- **JavaScript** : Logique du jeu
-
-## 🎨 Personnalisation
-
-Modifiez :
-- Couleurs et styles dans `css/style.css`
-- Logique et paramètres du jeu dans `js/scripts.js`
-
-**Bon jeu ! 🎮**
+[MIT](LICENSE)
